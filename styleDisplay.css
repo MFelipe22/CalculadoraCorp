@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --login-bg:#f8f3ff;
+    --title-bg: #9089cc;
+    --button-bg: #674baf;
+    --light-pink: #e882e8;
+    --image-bg:  #eadbff ;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to top, #1418ee 0%, #e440b5c4 100%);
+}
+
+
+.login-container {
+    height: 70em;
+    width: 60em;
+    margin: 6em auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.login-info-container {
+    width: 60em;
+    height: 80em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+}
+
+
+
+.title {
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--title-bg);
+}
+
+
+
+/* .preLoadedInput:hover {
+    border: 2px solid var(--button-bg);
+} */
+
+.preLoadedInput {
+    padding-left: 20px;
+    border-color: #876fc2;
+    border-radius: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    margin: 3px;
+    width: 90%;
+    height: 3.125rem;
+    font-size: 1em;
+    
+}
+
+#contenedorIMC{
+    width: 90%;
+}
+
+
+#informacionIMC{
+    text-align: left;
+    padding-left:48px;
+    padding-top: 2%;
+
+}
+
+#metabolismoBasalInput{
+    padding-top: 8%;
+}
