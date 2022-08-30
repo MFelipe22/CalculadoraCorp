@@ -23,12 +23,16 @@ function tirarAlerta(e){
 
   let mb = ""
 
-  if(sexo == "Hombre") {
-    mb = metabolismoBasalHombre(peso, altura, edad)
-  }else if (sexo == "Mujer"){
-    mb = metabolismoBasalMujer(peso, altura, edad);
-  }else alert("Debe elegir el Sexo correspondiente")
+  // if(sexo == "Hombre") {
+  //   mb = metabolismoBasalHombre(peso, altura, edad)
+  // }else if (sexo == "Mujer"){
+  //   mb = metabolismoBasalMujer(peso, altura, edad);
+  // }else alert("Debe elegir el Sexo correspondiente")
 
+
+  sexo == "Hombre"
+      ? mb = metabolismoBasalHombre(peso, altura, edad)
+      : mb = metabolismoBasalMujer(peso, altura, edad);
 
 
 
