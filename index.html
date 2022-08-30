@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Calculadora Corporal</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-info-container">
+        <h1 class="title">Calculadora IMC - MB</h1>
+        <div class="social-login">
+          <div id="boton-hombre" class="social-login-element">
+            <img src="images/24171.svg" alt="hombre-image" />
+            <div><span>Hombre</span></div>
+          </div>
+          <div id="boton-mujer" class="social-login-element">
+            <img src="images/24170.svg" alt="mujer-image" />
+            <span>Mujer</span>
+          </div>
+        </div>
+        <form class="inputs-container" onsubmit="tirarAlerta(event)">
+          <!--onsubmit con la funcion del main.js y el evento que genera-->
+          <input
+           class="input"
+            id="peso"
+            type="text"
+            placeholder="Peso [KG]" 
+            />
+          <input
+            class="input"
+            id="altura"
+            type="text"
+            placeholder="Altura [CM]"
+          />
+          <input
+          class="input" 
+          id="edad" 
+          type="text" 
+          placeholder="Edad" 
+          />
+          <button type="submit" class="btn" id="botonCalcular">CALCULAR</button>
+          <!--type submit-->
+
+          <input
+            class="input"
+            type="text"
+            placeholder="Indice Masa Corporal: 0"
+            disabled
+            id="imc"
+          />
+          <input
+            class="input"
+            type="text"
+            placeholder="Metabolismo Basal: 0 Kcal"
+            disabled
+            id="mb"
+          />
+          <input
+            class="input"
+            type="text"
+            placeholder="Mantener Peso:" 
+            disabled
+            id="mantener-peso"
+          />
+          <input
+          class="input"
+          type="text"
+          placeholder="Bajar Peso:" 
+          disabled
+          id="bajar-peso"
+        />
+        <input
+        class="input"
+        type="text"
+        placeholder="Aumentar Peso:" 
+        disabled
+        id="aumentar-peso"
+      />
+        </form>
+      </div>
+      <img class="image-container" src="images/312254.svg" alt="" />
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
