@@ -20,49 +20,53 @@ function tirarAlerta(e){
   let altura = parseInt(document.getElementById("altura").value);
   let edad = parseInt(document.getElementById("edad").value);
   let alturaEnMetros = altura / 100;
-
+  
   let mb = ""
-
+  
   // if(sexo == "Hombre") {
   //   mb = metabolismoBasalHombre(peso, altura, edad)
   // }else if (sexo == "Mujer"){
   //   mb = metabolismoBasalMujer(peso, altura, edad);
   // }else alert("Debe elegir el Sexo correspondiente")
-
-
+  
+  
   sexo == "Hombre"
-      ? mb = metabolismoBasalHombre(peso, altura, edad)
-      : mb = metabolismoBasalMujer(peso, altura, edad);
-
-
-
+  ? mb = metabolismoBasalHombre(peso, altura, edad)
+  : mb = metabolismoBasalMujer(peso, altura, edad);
+  
+  redireccionar()
+  
   document.getElementById("imc").value = `Indice Masa Corporal: ${(peso /(alturaEnMetros * alturaEnMetros)).toFixed(2)}`;
-
+  
   document.getElementById("mb").value = `Metabolismo Basal: ${(mb).toFixed()} Kcal`;
-
+  
   document.querySelector("#mantener-peso").value = `Mantener peso:  ${(mantener(mb)).toFixed()} Kcal `;
   document.querySelector("#bajar-peso").value = `Bajar peso:  ${(bajar(mb)).toFixed()} Kcal `;
   document.querySelector("#aumentar-peso").value = `Aumentar peso:  ${(subir(mb)).toFixed()} Kcal `;
+  
+  
+  
+  
+}
 
-
-
-
+function redireccionar(){
+  location.href = "displayInfo.html";
 }
 
 function bajar(mb){
-let bajar = (mb*101.98)/100
-return bajar
-
+  let bajar = (mb*101.98)/100
+  return bajar
+  
 }
 
 function mantener(mb){
-let mantener = (mb*119.98)/100
-return mantener
+  let mantener = (mb*119.98)/100
+  return mantener
 }
 
 function subir(mb){
-let subir = (mb*137.98)/100
-return subir
+  let subir = (mb*137.98)/100
+  return subir
 }
 
 function metabolismoBasalHombre(peso, altura, edad) {
