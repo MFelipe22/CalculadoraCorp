@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="main.js"></script>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styleDisplay.css" />
-  <script src="main.js"></script>
   
   <title>Calculadora Corporal</title>
 </head>
@@ -13,9 +13,9 @@
   <div class="login-container">
     <div class="login-info-container">
       <h1 class="title">Informacion Corporal</h1>
-      
+      <form id = "formulario-datos-a-mostrar">
       <div id="contenedorIMC">
-        <input type="text" disabled placeholder="Indice Masa Corporal: " class="preLoadedInput">
+        <input type="text" disabled placeholder="Indice Masa Corporal: " class="preLoadedInput" id="mostrar-datos-imc"> //MOSTRARSE ACA -- > MOSTRARSE ACA 
         <div id="informacionIMC">
           <div class="bad">Delgadez Severa: (<. 16) </div>
           <div class="bad">Delgadez Moderada: (16 - 16.99) </div>
@@ -26,11 +26,10 @@
           <div class="bad">Obesidad II: (35 - 39.99)</div> 
           <div class="bad">Obesidad III: (> 40 )</div>
         </div>
-            <div id="metabolismoBasalInput"><input type="text" disabled placeholder="Metabolismo Basal: " class="preLoadedInput"></div>
-        </div>
+        <div id="metabolismoBasalInput"><input type="text" disabled placeholder="Metabolismo Basal: " class="preLoadedInput"></div> //MOSTRARSE ACA -- > MOSTRARSE ACA 
       </div>
+    </form>
     </div>
-    <script src="main.js"></script>
-  </body>
-  </html>
-  
+  </div>
+</body>
+</html>

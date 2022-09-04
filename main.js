@@ -12,35 +12,35 @@ document.getElementById("boton-mujer").addEventListener("click", () => {
   document.getElementById("boton-hombre").style.backgroundColor = "inherit";
 });
 
+
+
+
 function tirarAlerta(e){ 
   //pasa el evento por parametro
   e.preventDefault(); // esto hace que no se actualice la pagina
-  //aca iria el codigo para calcular el imc
-  let peso = parseInt(document.getElementById("peso").value); //faltaba el .value y mandaba el input en lugar del valor que esta adentro
+ 
+  let peso = parseInt(document.getElementById("peso").value); 
   let altura = parseInt(document.getElementById("altura").value);
   let edad = parseInt(document.getElementById("edad").value);
   let alturaEnMetros = altura / 100;
   
   let mb = ""
   
-  // if(sexo == "Hombre") {
-  //   mb = metabolismoBasalHombre(peso, altura, edad)
-  // }else if (sexo == "Mujer"){
-  //   mb = metabolismoBasalMujer(peso, altura, edad);
-  // }else alert("Debe elegir el Sexo correspondiente")
-  
   
   sexo == "Hombre"
   ? mb = metabolismoBasalHombre(peso, altura, edad)
   : mb = metabolismoBasalMujer(peso, altura, edad);
   
+  
   redireccionar()
   
-  document.getElementById("imc").value = `Indice Masa Corporal: ${(peso /(alturaEnMetros * alturaEnMetros)).toFixed(2)}`;
   
-  document.getElementById("mb").value = `Metabolismo Basal: ${(mb).toFixed()} Kcal`;
+  document.getElementById("imc").value = `Indice Masa Corporal: ${(peso /(alturaEnMetros * alturaEnMetros)).toFixed(2)}`; //MOSTRAR ESTO EN displayInfor.html PRIMER INPUT  -- > MOSTRAR ESTO EN displayInfor.html PRIMER INPUT  
   
-  document.querySelector("#mantener-peso").value = `Mantener peso:  ${(mantener(mb)).toFixed()} Kcal `;
+  document.getElementById("mb").value = `Metabolismo Basal: ${(mb).toFixed()} Kcal`; //MOSTRAR ESTO EN displayInfor.html SEGUNDO INPUT  -- > MOSTRAR ESTO EN displayInfor.html SEGUNDO INPUT  
+  
+  
+  document.querySelector("#mostrar-datos-imc").value = `Mantener peso:  ${(mantener(mb)).toFixed()} Kcal `;
   document.querySelector("#bajar-peso").value = `Bajar peso:  ${(bajar(mb)).toFixed()} Kcal `;
   document.querySelector("#aumentar-peso").value = `Aumentar peso:  ${(subir(mb)).toFixed()} Kcal `;
   
@@ -51,6 +51,7 @@ function tirarAlerta(e){
 
 function redireccionar(){
   location.href = "displayInfo.html";
+  
 }
 
 function bajar(mb){
